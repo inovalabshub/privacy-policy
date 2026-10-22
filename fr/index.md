@@ -1,84 +1,73 @@
-# Politique de confidentialité de Gestion Patients
+# Politique de Confidentialité pour Mes Honoraires
 
-**Dernière mise à jour :** 16 octobre 2026
+**Dernière mise à jour :** 22 octobre 2026
 
-**Inova Labs** exploite l’application mobile **Gestion Patients** (ci-après, l’« Application »). La présente politique de confidentialité décrit nos pratiques concernant la collecte, l’utilisation et la divulgation des informations personnelles et des informations relatives à l’appareil lorsque vous utilisez l’Application.
-
----
-
-### 1. Architecture « Local-First » et souveraineté des données
-
-Gestion Patients est conçue selon une architecture **Local-First** (priorité au stockage local). **Nous n’exploitons, ne possédons et ne maintenons aucune base de données backend indépendante ni aucun serveur cloud destiné à stocker vos dossiers patients ou vos données financières.** Tous les noms des patients, historiques de consultation, statuts de paiement et notes saisis dans l’Application sont stockés **exclusivement dans la mémoire locale de votre appareil**.
+**Inova Labs** exploite l'application mobile **Mes Honoraires** (ci-après l'« Application »). La présente Politique de Confidentialité vous informe de nos politiques concernant la collecte, l'utilisation et la divulgation des informations personnelles et de l'appareil lorsque vous utilisez notre Application.
 
 ---
 
-### 2. Informations traitées et collectées
-
-* **Dossiers patients et données de paiement (sous le contrôle de l’utilisateur) :** toutes les données financières que vous saisissez restent stockées localement sur votre téléphone.
-
-* **Sauvegardes Google Drive (via une application Web Apps Script) :** si vous choisissez de sauvegarder votre base de données, l’Application transmet les données de sauvegarde de manière sécurisée vers votre compte Google Drive personnel, au moyen d’une application Web personnalisée Google Apps Script déployée sous votre contrôle. Aucun serveur tiers ne traite ni ne stocke le contenu de cette sauvegarde : les données sont transférées directement depuis l’Application vers votre espace de stockage Google Drive personnel.
-
-* **Performances et statistiques d’utilisation de l’Application (Firebase) :** nous intégrons **Firebase Analytics**, **Firebase Crashlytics** et **Firebase Remote Config** (services fournis par Google LLC) afin de collecter des données techniques ne permettant pas, à elles seules, de vous identifier :
-  * **Analytics :** statistiques d’utilisation, parcours de navigation dans l’Application et fréquence d’interaction avec les fonctionnalités, afin d’améliorer l’expérience utilisateur.
-  * **Crashlytics :** rapports automatiques de plantage, traces de pile (*stack traces*) et informations sur l’état de l’appareil au moment du plantage, afin de diagnostiquer et de corriger les anomalies.
-  * **Remote Config :** gestion de la configuration à distance, notamment pour vérifier les mises à jour de l’Application, activer ou désactiver certaines fonctionnalités et communiquer des annonces de maintenance.
-
-* **Fonctionnement « Offline-First » et connectivité réseau :** l’Application fonctionne entièrement hors ligne pour la gestion quotidienne des dossiers patients et le suivi des consultations en clinique. Une connexion réseau est utilisée uniquement lorsque l’utilisateur lance une sauvegarde via Google Apps Script ou lorsque Firebase traite en arrière-plan les données analytiques et les rapports de plantage.
-
-* **Données biométriques locales :** si vous activez la sécurité biométrique (déverrouillage par empreinte digitale ou reconnaissance faciale), l’authentification est entièrement gérée par le module de sécurité du système d’exploitation de votre appareil. L’Application n’accède jamais aux données biométriques brutes, ne les enregistre pas et ne les stocke pas.
+### 1. Architecture Locale & Souveraineté des Données
+Mes Honoraires est conçue comme une application fonctionnant localement sur l'appareil. **Nous n'exploitons, ne possédons ni ne maintenons aucune base de données centrale ni serveur cloud tiers pour stocker vos dossiers de bénéficiaires ou vos enregistrements d'honoraires.** Tous les noms de bénéficiaires, journaux d'interventions, statuts de paiement et notes saisies dans l'Application sont stockés **strictement et exclusivement dans la mémoire locale de votre appareil**.
 
 ---
 
-### 3. Utilisation de vos informations
+### 2. Informations Traitées et Collectées
 
-* **Fonctionnement local :** afficher, rechercher et organiser les dossiers patients, ainsi que calculer localement sur votre appareil les soldes dus par les patients.
+* **Dossiers Bénéficiaires & Honoraires (Gérés par l'Utilisateur) :** Toutes les données financières et administratives que vous saisissez restent localement sur votre téléphone.
 
-* **Stabilité et amélioration de l’Application :** les données Crashlytics sont utilisées exclusivement pour identifier les anomalies, les problèmes de stabilité et les ralentissements. Les données Analytics nous aident à comprendre l’utilisation des fonctionnalités afin d’améliorer l’ergonomie de l’Application.
+* **Sauvegardes Google Drive (via Application Web Apps Script) :** Si vous choisissez de sauvegarder votre base de données, l'Application transmet vos données de sauvegarde de manière sécurisée à votre compte Google Drive personnel via une application web Google Apps Script personnalisée, déployée sous votre contrôle. Aucun serveur tiers ne traite ni ne stocke ces données de sauvegarde ; elles vont directement de votre application vers votre espace de stockage personnel Google Drive.
 
-* **Maintenance et mises à jour :** Remote Config permet de gérer les paramètres de l’Application et de vous informer des mises à jour obligatoires ou facultatives.
+* **Performance de l'Application & Analyses (Firebase) :** Nous intégrons **Firebase Analytics**, **Firebase Crashlytics** et **Firebase Remote Config** (services fournis par Google LLC) pour collecter des données techniques non identifiables :
+  * **Analytics :** Métriques d'utilisation, parcours de navigation dans l'application et fréquence d'utilisation des fonctionnalités afin de nous aider à améliorer l'expérience utilisateur.
+  * **Crashlytics :** Rapports de plantage automatisés, traces d'exécution et état de l'appareil au moment d'une erreur pour nous aider à diagnostiquer et résoudre les dysfonctionnements.
+  * **Remote Config :** Utilisé pour vérifier les mises à jour de l'application et les annonces de maintenance.
 
----
+* **Architecture Hors Ligne & Connectivité Réseau :** L'application fonctionne entièrement hors ligne pour la gestion quotidienne des dossiers bénéficiaires et le suivi des établissements. Elle se connecte au réseau uniquement lorsque l'utilisateur exécute une sauvegarde Google Apps Script ou lorsque Firebase traite les données d'analyse et de plantage en arrière-plan.
 
-### 4. Services tiers
-
-L’Application intègre les services tiers suivants :
-
-* **Firebase (Google LLC) :** utilisé pour les statistiques d’utilisation, les rapports de plantage et la gestion de la configuration à distance. Le traitement des données effectué par Firebase est soumis aux règles de confidentialité de Google.
-
-* **Google Apps Script et Google Drive :** utilisés uniquement pour permettre les sauvegardes de la base de données vers votre compte Google Drive personnel, à votre initiative.
+* **Données Biométriques Locales :** Si vous activez la sécurité biométrique (empreinte digitale / déverrouillage facial), l'authentification est gérée entièrement par le module de sécurité du système d'exploitation de votre appareil. L'Application n'accède, n'enregistre ni ne stocke jamais vos données biométriques brutes.
 
 ---
 
-### 5. Conservation, contrôle et suppression des données
+### 3. Utilisation de Vos Informations
+* **Opérations Locales :** Pour afficher, rechercher, organiser et calculer localement sur votre appareil les soldes de paiement des bénéficiaires et générer votre bilan des honoraires.
 
-* **Activation et codes de licence :** l’accès à l’Application nécessite un code d’activation valide. Il vous appartient de protéger vos identifiants d’activation.
+* **Stabilité & Amélioration de l'Application :** Les données Crashlytics sont utilisées strictement pour identifier les bogues, les problèmes de stabilité et les ralentissements de performance. Les données Analytics nous aident à comprendre comment les fonctionnalités sont utilisées afin d'en améliorer l'ergonomie.
 
-* **Suppression depuis l’Application :** vous pouvez à tout moment supprimer des dossiers patients individuellement, supprimer une clinique entière, ce qui supprime automatiquement tous les dossiers patients qui lui sont associés, ou réinitialiser votre base de données locale.
-
-* **Désinstallation de l’Application et invalidation du licence :** la désinstallation de l’Application ou l’effacement de ses données depuis les paramètres de votre appareil supprime définitivement de celui-ci toutes les bases de données locales de l’Application, sauf si elles ont été sauvegardées au moyen de votre procédure Google Apps Script. En outre, la désinstallation ou l’effacement des données de l’Application réinitialise son état d’activation local : les licences précédemment utilisés deviennent invalides et un nouveau code d’activation est nécessaire pour réactiver l’Application.
-
----
-
-### 6. Santé et conformité en matière de protection des données
-
-Gestion Patients est exclusivement un outil de suivi administratif destiné aux professionnels de santé. Il incombe à l’utilisateur (médecin) de s’assurer que le stockage et le traitement des informations relatives aux patients respectent les règles de confidentialité médicale, de protection de la vie privée des patients et de protection des données applicables dans sa juridiction.
+* **Maintenance & Mises à Jour :** Remote Config est utilisé pour gérer les configurations au niveau de l'application et vous informer des mises à jour obligatoires ou optionnelles.
 
 ---
 
-### 7. Confidentialité des enfants
-
-L’Application est strictement destinée à un usage professionnel par des praticiens adultes. Nous ne collectons pas sciemment de données personnelles concernant des enfants de moins de 13 ans.
-
----
-
-### 8. Modifications de la présente politique de confidentialité
-
-Nous pouvons modifier la présente politique de confidentialité à tout moment. Toute modification sera publiée sur cette page, accompagnée d’une date de mise à jour révisée.
+### 4. Services Tiers
+Notre Application intègre les services tiers de confiance suivants :
+* **Firebase (Google LLC) :** Pour les analyses, les rapports de plantage et la gestion de la configuration à distance. Les politiques de confidentialité de Google régissent les données traitées par Firebase.
+* **Google Apps Script & Google Drive :** Utilisés uniquement pour faciliter les sauvegardes de base de données initiées par l'utilisateur vers son compte Google Drive personnel.
 
 ---
 
-### 9. Nous contacter
+### 5. Conservation, Contrôle et Suppression des Données
+* **Jetons d'Activation & de Licence :** L'accès à l'Application nécessite un jeton d'activation valide. Vous êtes responsable de la préservation de vos identifiants d'activation.
 
-Pour toute question ou préoccupation concernant cette politique de confidentialité, vous pouvez nous contacter à l’adresse suivante :
+* **Suppression dans l'Application :** Vous pouvez supprimer des dossiers bénéficiaires individuels ou supprimer un établissement entier — ce qui supprimera automatiquement tous les dossiers bénéficiaires associés à cet établissement, à tout moment depuis l'Application, ou réinitialiser votre base de données locale.
 
+* **Désinstallation & Invalidation du Jeton :** La désinstallation de l'Application ou l'effacement des données de l'application via les paramètres de votre téléphone supprimera définitivement toutes les bases de données locales de votre appareil (sauf si elles ont été sauvegardées via votre routine Google Apps Script). De plus, la désinstallation ou l'effacement des données révoque l'état d'activation local, les jetons précédemment utilisés deviendront invalides et un nouveau jeton d'activation sera nécessaire pour réactiver l'Application.
+
+---
+
+### 6. Conformité Professionnelle et Protection des Données
+Mes Honoraires fonctionne uniquement comme un outil de suivi administratif pour les praticiens indépendants. Il relève de la seule responsabilité de l'utilisateur (praticien) de s'assurer que le stockage et la gestion des informations sur les clients et les honoraires sont conformes aux lois locales sur la comptabilité commerciale, la confidentialité et la protection des données applicables dans sa juridiction.
+
+---
+
+### 7. Protection de la Vie Privée des Enfants
+L'Application est strictement destinée à un usage professionnel par des praticiens et exploitants adultes. Nous ne collectons pas sciemment d'informations personnelles auprès d'enfants de moins de 13 ans.
+
+---
+
+### 8. Modifications de la Présente Politique de Confidentialité
+Nous pouvons mettre à jour notre Politique de Confidentialité de temps à autre. Toute modification sera publiée sur cette page avec une date de « Dernière mise à jour » révisée.
+
+---
+
+### 9. Nous Contacter
+Si vous avez des questions ou des préocupations concernant cette Politique de Confidentialité, veuillez nous contacter à :
 * **E-mail :** patienttracker.support@gmail.com
